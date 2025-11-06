@@ -62,22 +62,26 @@ Se creó una tabla de `_Medidas` para centralizar los cálculos, incluyendo:
 
 ## 5. El Dashboard: Hallazgos Clave
 
-El dashboard final se compone de 3 páginas interactivas diseñadas en "dark mode" para un impacto visual profesional.
+El dashboard final es una herramienta interactiva de 3 páginas, diseñada en "dark mode" para un análisis de alto impacto y una lectura clara.
 
 ### Página 1: Panorama Nacional
-* Muestra los KPIs nacionales, incluyendo la **Tasa por 100k Hab.**, el **Crecimiento Interanual** y las tarjetas dinámicas del **Delito Principal** y la **Entidad con Mayor Incidencia**.
-* El visual central es un **mapa coroplético** de México, coloreado por la `Tasa Delitos x 100k`. La escala de color es **relativa** (basada en Mínimo, Mediana, Máximo) para reaccionar a los filtros de año o delito.
-* Un gráfico de barras y líneas muestra la tendencia histórica del volumen de delitos (barras) vs. su crecimiento porcentual (línea).
+Esta página principal ofrece un resumen ejecutivo de la seguridad en el país, respondiendo "¿Cómo estamos?".
+* **KPIs Estratégicos:** Se muestran 6 tarjetas principales, incluyendo las métricas de contexto (`Población Total: 126.01 mill.`, `Delitos Totales: 21.24 mill.`) y las métricas de análisis clave: `Incidencia (Tasa x 100k): 17 mil` y `Crecimiento Interanual: 10.54%`.
+* **Tarjetas Dinámicas (TOP 1):** Dos tarjetas avanzadas usan DAX (`TOPN`) para mostrar en tiempo real el `Delito Principal` (ej. "Robo") y la `Entidad con Mayor Incidencia` (ej. "México"), las cuales se actualizan según los filtros aplicados.
+* **Mapa Coroplético (Visual Central):** El mapa de México está configurado con formato condicional (verde-amarillo-rojo) basado en la `Tasa Delitos x 100k` relativa. Esto permite identificar visualmente los "puntos calientes" del país de un solo vistazo.
+* **Gráfico de Tendencia (YoY):** Un gráfico combinado de barras apiladas que compara la `Tasa Delitos` (Año Actual, barras blancas) contra la `Tasa Delitos AA` (Año Anterior, línea), permitiendo una comparativa visual inmediata.
 
 ### Página 2: Análisis Estatal (Drill-through)
-* Se accede haciendo clic derecho en un estado del mapa principal.
-* Muestra los KPIs filtrados para ese estado.
-* El visual principal es un **ranking de municipios por Tasa de Delitos**, identificando los "puntos calientes" dentro de la entidad.
+Esta página se activa al hacer clic derecho en un estado del mapa, respondiendo "¿Qué está pasando *dentro* de esta entidad?".
+* **KPIs Estatales:** Las tarjetas principales se filtran para mostrar la `Tasa Delitos`, `Crecimiento % vs AA` y `Total Delitos` basados en el estado seleccionado.
+* **Rankings Estatales y Municipales:** Dos gráficos de barras identifican los "Estados con Alta Incidencia" (Top 5 en rojo) y los "Municipios con Alta Incidencia" (Bottom 5 en verde), ambos basados en su `Incidencia`.
+* **Análisis de Estacionalidad:** Un gráfico de líneas (`Tasa Delitos por Mes`) muestra la tendencia mensual de la tasa *dentro* de ese estado, permitiendo identificar patrones estacionales (ej. picos en marzo, valles en diciembre).
 
-### Página 3: Análisis por Delito
-* Muestra un ranking de los delitos más comunes por volumen total.
-* Un gráfico de líneas filtrado por `Top 5` muestra las tendencias históricas de los 5 delitos principales.
-* Un Treemap desglosa los `Subtipos de Delito` (ej. "Robo a transeúnte", "Robo de vehículo").
+### Página 3: Análisis por Tipo de Delito
+Esta página desglosa *qué* delitos están ocurriendo.
+* **Ranking de Incidencia:** Un gráfico de barras (`Incidencia por delito`) clasifica los delitos más comunes, destacando "Robo", "Lesiones" y "Daño a la propiedad" como los principales.
+* **Tendencia Trimestral (Top 5):** Un gráfico de líneas compara las tendencias trimestrales de los 5 delitos con mayor incidencia, permitiendo ver si, por ejemplo, "Robo" sube mientras "Lesiones" baja.
+* **Desglose de Sub-Delito (Treemap):** Un mapa de árbol (`Treemap`) muestra visualmente la proporción de todos los sub-delitos, permitiendo identificar rápidamente categorías problemáticas como "Robo a casa habitación" o "Violencia familiar".
 
 ---
 
@@ -88,12 +92,14 @@ El dashboard final se compone de 3 páginas interactivas diseñadas en "dark mod
 **https://app.powerbi.com/view?r=eyJrIjoiODEzYjNlMzctNWQ2Zi00N2NhLTgyOWYtNDZlZDhjODIzOGE5IiwidCI6ImIwM2EzOWY4LWVlNDAtNDk3My1hNDUwLTIyOGExYzY3YWI0YSJ9**
 
 **Pagina 1: Panorama Nacional**
-<img width="1215" height="680" alt="image" src="https://github.com/user-attachments/assets/a61326a2-13a9-4d6c-aff4-02817ce77277" />
+<img width="1210" height="676" alt="image" src="https://github.com/user-attachments/assets/04051588-9276-49b8-81b5-1fd21ffcdef7" />
+
 
 **Pagina 1: Análisis Estatal**
-<img width="1210" height="676" alt="image" src="https://github.com/user-attachments/assets/0085fdac-4359-4234-a650-eb1877fc634b" />
+<img width="1214" height="680" alt="image" src="https://github.com/user-attachments/assets/81f53543-bd65-4524-bc9e-e51d35936fbd" />
 
 
 **Análisis por Delito**
-<img width="1211" height="677" alt="image" src="https://github.com/user-attachments/assets/34dcd563-2ea3-45e3-81ee-0e3ad2e0d645" />
+<img width="1214" height="679" alt="image" src="https://github.com/user-attachments/assets/a405d2de-f714-47e7-8338-9fea448c9de8" />
+
 
