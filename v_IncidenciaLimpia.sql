@@ -1,15 +1,10 @@
-DROP VIEW IF EXISTS v_IncidenciaLimpia;
-
--- PASO 2: Creamos la vista nueva con las columnas de Clave_Ent y Cve. Municipio
 CREATE VIEW v_IncidenciaLimpia AS
 
 -- CTE para "des-pivotear" las columnas de meses
 WITH UnpivotedData AS (
     SELECT
-        -- --- ¡COLUMNAS AÑADIDAS! ---
         r."Clave_Ent",
         r."Cve. Municipio",
-        -- ---------------------------
         r."Año",
         r."Entidad",
         r."Municipio",
@@ -48,10 +43,8 @@ WITH UnpivotedData AS (
 
 -- Selección final y creación de la columna de Fecha
 SELECT
-    -- --- ¡COLUMNAS AÑADIDAS! ---
     ud."Clave_Ent",
     ud."Cve. Municipio",
-    -- ---------------------------
     make_date(ud."Año", ud.Mes_Numero, 1) AS Fecha,
     ud."Año",
     ud.Mes_Nombre AS Mes,
@@ -65,4 +58,5 @@ FROM
     UnpivotedData ud
 WHERE
     ud.TotalDelitos IS NOT NULL AND ud.TotalDelitos > 0;
+
 	
