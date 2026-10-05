@@ -4,6 +4,17 @@ Este es un proyecto de Business Intelligence de nivel avanzado que analiza la in
 
 ---
 
+## Propósito del proyecto
+Proyecto de práctica de **nivel avanzado** para enfrentar un volumen real de datos (+3 millones de filas) y llevarlo de principio a fin: ETL en SQL, modelado complejo y dashboard ejecutivo.
+
+**Habilidades que pone en práctica:**
+* ETL en PostgreSQL con grandes volúmenes (`psql \copy`) y transformación UNPIVOT mediante una vista.
+* Modelado de datos en Power BI: integración de una segunda fuente, clave compuesta y relaciones con filtro cruzado.
+* DAX avanzado: inteligencia de tiempo, tasas (por 100k habitantes) y `TOPN` para tarjetas dinámicas.
+* Diseño de un dashboard interactivo de varias páginas con *drill-through*.
+
+---
+
 ## 1. Problema de Negocio
 
 Los datos públicos sobre delincuencia en México (proporcionados por el SESNSP) son masivos, crudos y están en un formato "ancho" (meses como columnas). Esto los hace imposibles de analizar en Excel.
