@@ -4,7 +4,7 @@ Este es un proyecto de Business Intelligence de nivel avanzado que analiza la in
 
 ---
 
-## 🧭 Propósito del proyecto
+## Propósito del proyecto
 Proyecto de práctica de **nivel avanzado** para enfrentar un volumen real de datos (+3 millones de filas) y llevarlo de principio a fin: ETL en SQL, modelado complejo y dashboard ejecutivo.
 
 **Habilidades que pone en práctica:**
